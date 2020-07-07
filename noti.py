@@ -50,7 +50,7 @@ def get_noti_data():
 
     datas = res
 
-    data = [datas[x:x+10] for x in range(0, len(datas),10)]
+    data = [datas[x:x+8] for x in range(0, len(datas),8)]
 
     result = []
 
