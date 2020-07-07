@@ -31,6 +31,11 @@ def job():
 # schedule.every().day.at("01:00").do(job)
 sched.add_job(job, trigger="cron", hour='8',minute='30')
 
+@app.route("/")
+def noti():
+    job()
+    return "200"
+
 @app.route('/start')
 def start():
     sched.start()
