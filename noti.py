@@ -28,7 +28,7 @@ def get_noti_data():
         for k,v in i.items():
 
             if k == "ISSUE DATE" and v != "":
-                format_str = '%d/%b/%y' # The format
+                format_str = '%d/%m/%Y' # The format
                 datetime_obj = datetime.datetime.strptime(v, format_str)
                 delta = datetime_obj - today
                 # print(i["DWG NO"])
