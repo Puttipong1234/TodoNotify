@@ -22,6 +22,9 @@ executors = {
 }
 sched = BackgroundScheduler(timezone='Asia/Singapore', executors=executors)
 
+def testing1():
+    print ("testing1 - every 2 min...")
+
 
 def job():
     msgs = get_noti_data()
@@ -29,6 +32,7 @@ def job():
         r = requests.post(url, headers=headers , data = {'message':msg})
 
 # schedule.every().day.at("01:00").do(job)
+sched.add_job(testing1, 'cron', id='run_every_2_min', minute='*/2')
 sched.add_job(job, trigger="cron", hour='8',minute='30')
 
 @app.route("/")
@@ -38,6 +42,7 @@ def noti():
 
 @app.route('/start')
 def start():
+    job()
     sched.start()
     return "200"
 
