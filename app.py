@@ -10,7 +10,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.executors.pool import ThreadPoolExecutor, ProcessPoolExecutor
 
 url = 'https://notify-api.line.me/api/notify'
-token = 'eCmRDLwClKxu88KPMx7Qh5j5pc7aQCTPet2BXXwaKa9'
+token = 'TiaiYEoFnQIghXI8GXz3311xspBdHwEWNsFc3KLSyYi'
 headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
 
 app = Flask(__name__)
