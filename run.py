@@ -15,4 +15,4 @@ if __name__ == '__main__':
     sched = BlockingScheduler()
     sched.add_job(testing1, 'cron', id='run_every_2_min', minute='*/2')
     sched.add_job(testing2, 'cron', id='run_at_7_pm', hour='8')
-sched.start()
+    sched.start()
