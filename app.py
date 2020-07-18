@@ -40,11 +40,11 @@ def noti():
     job()
     return "200"
 
-@app.route('/start')
-def start():
-    job()
-    sched.start()
-    return "200"
+# @app.route('/start')
+# def start():
+#     job()
+#     sched.start()
+#     return "200"
 
 @app.route('/resume')
 def resume():
@@ -64,4 +64,5 @@ def new_token(new_token):
     return "200"
 
 if __name__ == '__main__':
+    sched.start()
     app.run(port=200,use_reloader=False)

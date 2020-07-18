@@ -60,7 +60,7 @@ def get_noti_data():
         data_to_noti_1_in = False
         data_to_noti_2_in = False
 
-        data_to_noti_1 = "\n🥵อีก 3 วันส่งแล้วเร่งมือหน่อย...\n"
+        data_to_noti_1 = "\n🥵เร่งมือหน่อย...\n"
         data_to_noti_2 = "\n😱สัปดาห์นี้มีส่งงาน....\n"
 
         for i in each:
