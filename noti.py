@@ -95,7 +95,8 @@ def get_noti_data():
             data_to_noti_2_in = False
             result.append(data_to_noti)
 
-    data_to_noti_3 = "\nกรุณาอัพเดต Progress ของงานได้ที่ \nhttps://docs.google.com/spreadsheets/d/1jf3OrYadk3ACMPw4amB6PbTgDn90Wa1TL6H5nnGfGDo/edit?usp=sharing"
+    data_to_noti_3 = "\nกรุณาอัพเดต Progress ของงานได้ที่ \nhttps://bit.ly/3fHyqDt \nกดลิงค์นี้เพื่อตรวจสอบงานที่ต้องส่งภายในสัปดาห์ \nhttps://bit.ly/32utLRq"
+
     result.append(data_to_noti_3)
     return result
 
