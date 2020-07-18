@@ -100,6 +100,6 @@ def get_noti_data():
     result.append(data_to_noti_3)
     return result
 
-if __name__ == "__main__":
-    get_noti_data()
+# if __name__ == "__main__":
+#     get_noti_data()
 

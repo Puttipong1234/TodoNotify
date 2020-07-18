@@ -31,7 +31,6 @@ def job():
     for msg in msgs:
         r = requests.post(url, headers=headers , data = {'message':msg})
 
-# schedule.every().day.at("01:00").do(job)
 sched.add_job(testing1, 'cron', id='run_every_2_min', minute='*/2')
 sched.add_job(job, trigger="cron", hour='8',minute='30')
 
@@ -39,12 +38,6 @@ sched.add_job(job, trigger="cron", hour='8',minute='30')
 def noti():
     job()
     return "200"
-
-# @app.route('/start')
-# def start():
-#     job()
-#     sched.start()
-#     return "200"
 
 @app.route('/resume')
 def resume():
@@ -64,5 +57,4 @@ def new_token(new_token):
     return "200"
 
 if __name__ == '__main__':
-    sched.start()
     app.run(port=200,use_reloader=False)
