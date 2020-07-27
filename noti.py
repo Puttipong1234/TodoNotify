@@ -56,7 +56,7 @@ def get_noti_data():
 
     for number,each in enumerate(data):
 
-        data_to_noti = "📋รายงานแผนงานประจำวันที่ {} 📋 {}/{}\n".format(str(datetime.datetime.now())[:10],str(number),len(data))
+        data_to_noti = "📋รายงานแผนงานประจำวันที่ {} 📋 \n".format(str(datetime.datetime.now())[:10])
         data_to_noti_1_in = False
         data_to_noti_2_in = False
 
@@ -99,7 +99,4 @@ def get_noti_data():
 
     result.append(data_to_noti_3)
     return result
-
-# if __name__ == "__main__":
-#     get_noti_data()
 
