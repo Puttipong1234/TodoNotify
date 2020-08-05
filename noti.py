@@ -79,7 +79,7 @@ def get_noti_data():
             if 3 < int(i["TIME_LEFT"]) <= 7:
 
                 try:
-                    int(float(i["PROGRESS"])) < 30
+                    int(float(i["PROGRESS"]))
                 
                 except:
                     continue
