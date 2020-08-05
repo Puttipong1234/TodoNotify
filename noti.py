@@ -83,11 +83,11 @@ def get_noti_data():
 
 
         for i in each:
-                try:
-                    int(float(i["PROGRESS"]))
-                
-                except:
-                    continue
+            try:
+                int(float(i["PROGRESS"]))
+            
+            except:
+                continue
             if 3 < int(i["TIME_LEFT"]) <= 7:
 
                 if int(float(i["PROGRESS"])) < 30:
