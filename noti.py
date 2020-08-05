@@ -64,6 +64,13 @@ def get_noti_data():
         data_to_noti_2 = "\n😱สัปดาห์นี้มีส่งงาน....\n"
 
         for i in each:
+
+            try:
+                int(float(i["PROGRESS"]))
+                
+            except:
+                continue
+
             if 0 < int(i["TIME_LEFT"]) <= 3 :
                 if int(i["PROGRESS"]) < 80:
                     data_to_noti_1_in = True
@@ -76,13 +83,12 @@ def get_noti_data():
 
 
         for i in each:
-            if 3 < int(i["TIME_LEFT"]) <= 7:
-
                 try:
                     int(float(i["PROGRESS"]))
                 
                 except:
                     continue
+            if 3 < int(i["TIME_LEFT"]) <= 7:
 
                 if int(float(i["PROGRESS"])) < 30:
                     data_to_noti_2_in = True
