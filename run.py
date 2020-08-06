@@ -1,6 +1,7 @@
 from noti import get_noti_data
 import time
 import requests
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 def testing1():
     print ("testing1 - every 2 min...")
@@ -11,8 +12,7 @@ def testing2():
         r = requests.post(url, headers=headers , data = {'message':msg})
     
 if __name__ == '__main__':
-    from apscheduler.schedulers.blocking import BlockingScheduler
     sched = BlockingScheduler()
-    sched.add_job(testing1, 'cron', id='run_every_2_min', minute='*/2')
+    sched.add_job(testing1, 'interval', id='run_every_2_min', minutes=3)
     sched.add_job(testing2, 'cron', id='run_at_7_pm', hour='8')
     sched.start()
