@@ -108,7 +108,7 @@ def get_noti_data():
             data_to_noti_2_in = False
             result.append(data_to_noti)
 
-    data_to_noti_3 = "\nกรุณาอัพเดต Progress ของงานได้ที่ \nhttps://bit.ly/3fHyqDt"
+    data_to_noti_3 = "\nกรุณาอัพเดต Progress ของงานได้ที่ \nhttps://bit.ly/3fHyqDt \nคตรวจสอบ Progress \nhttps://gyprogressnotify.herokuapp.com/"
 
     result.append(data_to_noti_3)
     return result
